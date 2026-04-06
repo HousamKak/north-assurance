@@ -22,7 +22,7 @@ const Terms = React.lazy(() => import('@/pages/Terms').then((m) => ({ default: m
 function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
         <Layout>
           <Suspense fallback={<div className="flex items-center justify-center min-h-[60vh]"><LoadingSpinner /></div>}>
