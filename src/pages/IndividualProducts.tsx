@@ -19,6 +19,7 @@ export const IndividualProducts: React.FC = () => {
       <PageHeader
         title="Individual Insurance"
         subtitle="Comprehensive coverage tailored to protect you and your family"
+        backgroundImage="/images/headers/individual.jpg"
       />
 
       <Section background="light">

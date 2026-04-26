@@ -16,21 +16,23 @@ export const About: React.FC = () => {
         description={`North Assurance s.a.l. - Lebanon's trusted insurance provider since 1973. ${COMPANY_INFO.yearsOfExperience}+ years of professional insurance services.`}
       />
 
-      <PageHeader title="About Us" subtitle="Building trust through excellence since 1973" />
+      <PageHeader
+        title="About Us"
+        subtitle="Building trust through excellence since 1973"
+        backgroundImage="/images/headers/about.jpg"
+      />
 
       {/* Company Overview */}
       <Section background="light">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection animation="slide-right">
             <div className="relative">
-              <div className="rounded-2xl shadow-2xl w-full h-[500px] bg-gradient-to-br from-primary/20 to-secondary/20 dark:from-primary/10 dark:to-secondary/10 flex items-center justify-center overflow-hidden">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl">
-                    <span className="text-white text-4xl font-bold">NA</span>
-                  </div>
-                  <p className="text-xl font-heading font-bold text-gray-900 dark:text-white">North Assurance s.a.l.</p>
-                  <p className="text-gray-600 dark:text-gray-400">Since 1973</p>
-                </div>
+              <div className="rounded-2xl shadow-2xl w-full h-[500px] overflow-hidden">
+                <img
+                  src="/images/hero/company-overview.jpg"
+                  alt="North Assurance office and client service"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-primary to-primary-dark text-white rounded-2xl p-6 shadow-2xl">
                 <div className="text-center">

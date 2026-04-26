@@ -29,7 +29,11 @@ export const Careers: React.FC = () => {
         description="Join North Assurance - Lebanon's trusted insurance leader. Explore career opportunities and apply today."
       />
 
-      <PageHeader title="Join Our Team" subtitle="Build your career with Lebanon's trusted insurance leader" />
+      <PageHeader
+        title="Join Our Team"
+        subtitle="Build your career with Lebanon's trusted insurance leader"
+        backgroundImage="/images/headers/careers.jpg"
+      />
 
       {/* Benefits */}
       <Section background="light">

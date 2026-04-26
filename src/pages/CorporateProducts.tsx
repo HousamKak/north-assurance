@@ -19,6 +19,7 @@ export const CorporateProducts: React.FC = () => {
       <PageHeader
         title="Corporate Insurance"
         subtitle="Protect your business with comprehensive insurance coverage"
+        backgroundImage="/images/headers/corporate.jpg"
       />
 
       <Section background="light">

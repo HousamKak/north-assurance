@@ -5,8 +5,10 @@ Place service-related images here.
 ## Required Images
 
 - `insurance-protection.jpg` - General insurance protection imagery
+- `life-insurance.jpg` - Family financial protection and life insurance imagery
 - `claims-process.jpg` - Claims processing imagery
 - `customer-service.jpg` - Customer service imagery
+- `property-insurance.jpg` - Home and property insurance imagery
 - `team-collaboration.jpg` - Team working together
 
 ## Specifications

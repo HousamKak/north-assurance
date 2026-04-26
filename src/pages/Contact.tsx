@@ -15,7 +15,11 @@ export const Contact: React.FC = () => {
         description="Get in touch with North Assurance. Contact us for insurance quotes, claims support, or general inquiries."
       />
 
-      <PageHeader title="Contact Us" subtitle="Get in touch with our team - we're here to help" />
+      <PageHeader
+        title="Contact Us"
+        subtitle="Get in touch with our team - we're here to help"
+        backgroundImage="/images/headers/contact.jpg"
+      />
 
       {/* Contact Form & Info */}
       <Section background="light">

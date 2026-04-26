@@ -35,6 +35,7 @@ export const MotorRepair: React.FC = () => {
       <PageHeader
         title="Motor Repair Services"
         subtitle="Professional auto repair and maintenance at our Zouk Mosbeh facility"
+        backgroundImage="/images/headers/motor-repair.jpg"
       />
 
       {/* Services */}

@@ -13,17 +13,34 @@ interface PageHeaderProps {
   title: string;
   subtitle?: string;
   breadcrumbs?: Breadcrumb[];
+  backgroundImage?: string;
 }
 
-export const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, breadcrumbs }) => {
+export const PageHeader: React.FC<PageHeaderProps> = ({
+  title,
+  subtitle,
+  breadcrumbs,
+  backgroundImage,
+}) => {
   const crumbs: Breadcrumb[] = breadcrumbs || [{ label: title }];
 
   return (
     <section className="relative bg-gradient-to-br from-primary via-primary-dark to-dark text-white py-20 overflow-hidden">
+      {backgroundImage && (
+        <>
+          <img
+            src={backgroundImage}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-primary-dark/75 to-dark/45" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark/40 via-transparent to-dark/20" />
+        </>
+      )}
+
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/3 -right-1/4 w-[500px] h-[500px] rounded-full bg-white/5 blur-3xl" />
-        <div className="absolute -bottom-1/3 -left-1/4 w-[400px] h-[400px] rounded-full bg-secondary/10 blur-3xl" />
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{

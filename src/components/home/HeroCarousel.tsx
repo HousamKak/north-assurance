@@ -17,6 +17,7 @@ const slides = [
     subtitle: `${COMPANY_INFO.yearsOfExperience}+ Years of Trust & Excellence`,
     description: 'Comprehensive insurance solutions for individuals and businesses since 1973',
     gradient: 'from-primary via-primary-dark to-dark',
+    image: '/images/hero/hero-1.jpg',
     cta: { label: 'Explore Our Services', to: ROUTES.INDIVIDUAL_PRODUCTS },
   },
   {
@@ -25,6 +26,7 @@ const slides = [
     subtitle: 'Hand by Hand Around the Clock',
     description: 'Professional service, quick claims processing, and personalized insurance solutions',
     gradient: 'from-dark via-primary-dark to-primary',
+    image: '/images/hero/hero-2.jpg',
     cta: { label: 'Get A Quote', to: ROUTES.CONTACT },
   },
 ];
@@ -52,11 +54,17 @@ export const HeroCarousel: React.FC = () => {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className={`relative h-[85vh] min-h-[500px] max-h-[800px] w-full overflow-hidden bg-gradient-to-br ${slide.gradient}`}>
+              <img
+                src={slide.image}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-primary-dark/75 to-dark/35" />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-dark/20" />
+
               {/* Decorative elements */}
               <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute -top-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-white/5 blur-3xl" />
-                <div className="absolute -bottom-1/4 -left-1/4 w-[500px] h-[500px] rounded-full bg-secondary/10 blur-3xl" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary/5 blur-3xl" />
                 {/* Grid pattern */}
                 <div
                   className="absolute inset-0 opacity-[0.03]"

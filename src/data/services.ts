@@ -6,6 +6,7 @@ export const services: Service[] = [
     title: 'Medical Insurance',
     description: 'Comprehensive health coverage including in-hospital care, ambulatory benefits, doctor visits, and medicines.',
     icon: 'FaHeartbeat',
+    image: '/images/services/insurance-protection.jpg',
     link: '/products/medical',
   },
   {
@@ -13,6 +14,7 @@ export const services: Service[] = [
     title: 'Life Insurance',
     description: 'Protect your loved ones with our comprehensive life insurance policies and secure their future.',
     icon: 'FaShieldAlt',
+    image: '/images/services/life-insurance.jpg',
     link: '/products/life',
   },
   {
@@ -20,6 +22,7 @@ export const services: Service[] = [
     title: 'Motor Insurance',
     description: 'All risk coverage, third party liability, and 24/7 claims support for your vehicle.',
     icon: 'FaCar',
+    image: '/images/services/claims-process.jpg',
     link: '/products/motor',
   },
   {
@@ -27,6 +30,7 @@ export const services: Service[] = [
     title: 'Travel Insurance',
     description: 'Medical emergencies, loss of luggage, trip cancellation coverage for worry-free travel.',
     icon: 'FaPlane',
+    image: '/images/services/customer-service.jpg',
     link: '/products/travel',
   },
   {
@@ -34,6 +38,7 @@ export const services: Service[] = [
     title: 'Property Insurance',
     description: 'Protect your home, office, or building against fires, burglary, water damage, and more.',
     icon: 'FaHome',
+    image: '/images/services/property-insurance.jpg',
     link: '/products/property',
   },
   {
@@ -41,6 +46,7 @@ export const services: Service[] = [
     title: 'Business Insurance',
     description: 'Comprehensive coverage for your business including liability, property, and professional indemnity.',
     icon: 'FaBriefcase',
+    image: '/images/services/team-collaboration.jpg',
     link: '/products/corporate',
   },
 ];

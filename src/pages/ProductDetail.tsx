@@ -56,36 +56,49 @@ export const ProductDetail: React.FC = () => {
         </div>
       </Section>
 
-      {/* Product Header */}
-      <Section className="bg-gradient-to-r from-primary to-primary-dark text-white py-16">
-        <AnimatedSection animation="fade">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4">
-                <span className="text-sm font-medium text-white/90">
-                  {product.category === 'individual' ? 'Individual' : 'Corporate'} Insurance
-                </span>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-                {product.name}
-              </h1>
-              <p className="text-xl text-white/90 mb-6">
-                {product.description}
-              </p>
-              {product.price && (
-                <div className="text-3xl font-bold mb-6">
-                  {product.price}
+      <section className="relative py-16 md:py-20 bg-gradient-to-r from-primary to-primary-dark text-white overflow-hidden">
+        {product.image && (
+          <>
+            <img
+              src={product.image}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-primary-dark/85 to-dark/55" />
+            <div className="absolute inset-0 bg-gradient-to-t from-dark/45 via-transparent to-dark/15" />
+          </>
+        )}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <AnimatedSection animation="fade">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div>
+                <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4">
+                  <span className="text-sm font-medium text-white/90">
+                    {product.category === 'individual' ? 'Individual' : 'Corporate'} Insurance
+                  </span>
                 </div>
-              )}
-            </div>
-            <div className="flex justify-center md:justify-end">
-              <div className="w-48 h-48 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl">
-                <Icon className="w-24 h-24 text-white" />
+                <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">
+                  {product.name}
+                </h1>
+                <p className="text-xl text-white/90 mb-6">
+                  {product.description}
+                </p>
+                {product.price && (
+                  <div className="text-3xl font-bold mb-6">
+                    {product.price}
+                  </div>
+                )}
+              </div>
+              <div className="flex justify-center md:justify-end">
+                <div className="w-48 h-48 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl border border-white/15">
+                  <Icon className="w-24 h-24 text-white" />
+                </div>
               </div>
             </div>
-          </div>
-        </AnimatedSection>
-      </Section>
+          </AnimatedSection>
+        </div>
+      </section>
 
       {/* Product Details & Quote Form */}
       <Section background="light">

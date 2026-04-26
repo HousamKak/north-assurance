@@ -51,8 +51,13 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to={ROUTES.HOME} className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-primary/25 transition-shadow">
-              <span className="text-white font-bold text-xl">NA</span>
+            <div className="w-12 h-12 rounded-xl shadow-lg group-hover:shadow-primary/25 transition-shadow overflow-hidden">
+              <img
+                src="/images/logos/logo-mark.svg"
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full"
+              />
             </div>
             <div>
               <span className="text-xl font-heading font-bold text-gray-900 dark:text-white block leading-tight">

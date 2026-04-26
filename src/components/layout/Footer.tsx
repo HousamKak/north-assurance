@@ -24,8 +24,13 @@ export const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-5">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">NA</span>
+              <div className="w-10 h-10 rounded-lg overflow-hidden">
+                <img
+                  src="/images/logos/logo-mark.svg"
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full"
+                />
               </div>
               <h3 className="text-xl font-heading font-bold text-white">
                 North Assurance

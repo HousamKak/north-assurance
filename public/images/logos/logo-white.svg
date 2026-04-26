@@ -1,0 +1,13 @@
+<svg width="680" height="180" viewBox="0 0 680 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">North Assurance white logo</title>
+  <desc id="desc">White North Assurance compass-shield logo with wordmark.</desc>
+  <g>
+    <rect x="16" y="18" width="144" height="144" rx="34" fill="#FFFFFF" fill-opacity="0.12"/>
+    <path d="M88 38L106 78L148 90L106 102L88 142L70 102L28 90L70 78L88 38Z" fill="#0DD3F1"/>
+    <path d="M88 56L101 84L130 90L101 96L88 124L75 96L46 90L75 84L88 56Z" fill="#FFFFFF"/>
+    <path d="M88 42C107.27 56.04 122.057 59.807 141.156 61.92V92.64C141.156 121.815 120.428 146.755 88 157.429C55.572 146.755 34.844 121.815 34.844 92.64V61.92C53.943 59.807 68.73 56.04 88 42Z" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+  <text x="190" y="82" fill="#FFFFFF" font-family="Poppins, Inter, Arial, sans-serif" font-size="48" font-weight="800" letter-spacing="0">North Assurance</text>
+  <text x="193" y="122" fill="#0DD3F1" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4">S.A.L.  SINCE 1973</text>
+  <path d="M194 144H604" stroke="#0DD3F1" stroke-width="6" stroke-linecap="round"/>
+</svg>

@@ -8,6 +8,7 @@ export const individualProducts: Product[] = [
     description: 'Comprehensive health coverage for you and your family',
     shortDescription: 'In-hospital, ambulatory benefits, doctor visits, and medicines coverage',
     icon: 'FaHeartbeat',
+    image: '/images/products/medical.jpg',
     features: [
       'In-hospital medical care',
       'Ambulatory benefits',
@@ -33,6 +34,7 @@ export const individualProducts: Product[] = [
     description: 'Complete protection for your vehicle',
     shortDescription: 'All risk coverage, third party liability, and 24/7 support',
     icon: 'FaCar',
+    image: '/images/products/motor.jpg',
     features: [
       'All risk coverage',
       'Third party liability',
@@ -58,6 +60,7 @@ export const individualProducts: Product[] = [
     description: 'Protect your loved ones financial future',
     shortDescription: 'Life protection and financial security for your family',
     icon: 'FaShieldAlt',
+    image: '/images/products/life.jpg',
     features: [
       'Death benefit',
       'Terminal illness coverage',
@@ -82,6 +85,7 @@ export const individualProducts: Product[] = [
     description: 'Travel with peace of mind worldwide',
     shortDescription: 'Medical emergencies, luggage loss, and trip cancellation coverage',
     icon: 'FaPlane',
+    image: '/images/products/travel.jpg',
     features: [
       'Medical emergencies abroad',
       'Emergency evacuation',
@@ -107,6 +111,7 @@ export const individualProducts: Product[] = [
     description: 'Protect your home and belongings',
     shortDescription: 'Coverage for homes, offices, and buildings',
     icon: 'FaHome',
+    image: '/images/products/property.jpg',
     features: [
       'Fire protection',
       'Burglary coverage',
@@ -132,6 +137,7 @@ export const individualProducts: Product[] = [
     description: 'Protection against accidental injuries',
     shortDescription: 'Life protection and disability coverage',
     icon: 'FaAmbulance',
+    image: '/images/products/personal-accident.jpg',
     features: [
       'Accidental death benefit',
       'Permanent total disability',
@@ -159,6 +165,7 @@ export const corporateProducts: Product[] = [
     description: 'Comprehensive health coverage for your employees',
     shortDescription: 'Employee health insurance with flexible plans',
     icon: 'FaHospital',
+    image: '/images/products/group-medical.jpg',
     features: [
       'Customizable plans',
       'Wide hospital network',
@@ -183,6 +190,7 @@ export const corporateProducts: Product[] = [
     description: 'Life insurance coverage for your workforce',
     shortDescription: 'Employee life protection and benefits',
     icon: 'FaUsers',
+    image: '/images/products/group-life.jpg',
     features: [
       'Death benefit',
       'Terminal illness coverage',
@@ -205,6 +213,7 @@ export const corporateProducts: Product[] = [
     description: 'Protect your professional practice',
     shortDescription: 'Coverage for professional errors and omissions',
     icon: 'FaBriefcase',
+    image: '/images/products/professional-indemnity.jpg',
     features: [
       'Legal defense costs',
       'Error and omission coverage',
@@ -228,6 +237,7 @@ export const corporateProducts: Product[] = [
     description: 'Comprehensive property protection',
     shortDescription: 'All-risk coverage for commercial properties',
     icon: 'FaBuilding',
+    image: '/images/products/property-all-risk.jpg',
     features: [
       'All-risk coverage',
       'Business interruption',
@@ -252,6 +262,7 @@ export const corporateProducts: Product[] = [
     description: 'Protection against cyber threats',
     shortDescription: 'Coverage for cyber security breaches',
     icon: 'FaShieldAlt',
+    image: '/images/products/cyber-insurance.jpg',
     features: [
       'Data breach coverage',
       'Cyber extortion',
@@ -276,6 +287,7 @@ export const corporateProducts: Product[] = [
     description: 'Protect company leadership',
     shortDescription: 'Personal liability coverage for executives',
     icon: 'FaUserTie',
+    image: '/images/products/directors-officers.jpg',
     features: [
       'Personal liability protection',
       'Defense costs',

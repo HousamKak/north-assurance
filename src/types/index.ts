@@ -5,6 +5,7 @@ export interface Product {
   description: string;
   shortDescription: string;
   icon: string;
+  image?: string;
   features: string[];
   coverage: string[];
   price?: string;
@@ -16,6 +17,7 @@ export interface Service {
   title: string;
   description: string;
   icon: string;
+  image?: string;
   link: string;
 }
 

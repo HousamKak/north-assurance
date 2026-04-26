@@ -1,0 +1,9 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">North Assurance mark</title>
+  <desc id="desc">A north-star compass and shield brand mark.</desc>
+  <rect width="512" height="512" rx="112" fill="#015FC9"/>
+  <path d="M256 74L310 202L438 256L310 310L256 438L202 310L74 256L202 202L256 74Z" fill="#0DD3F1"/>
+  <path d="M256 132L292 220L380 256L292 292L256 380L220 292L132 256L220 220L256 132Z" fill="#FFFFFF"/>
+  <path d="M256 177L282 236L341 256L282 276L256 335L230 276L171 256L230 236L256 177Z" fill="#015FC9"/>
+  <path d="M256 142C302.392 175.829 338 184.908 384 190V264C384 334.244 334.064 394.306 256 420C177.936 394.306 128 334.244 128 264V190C174 184.908 209.608 175.829 256 142Z" stroke="#FFFFFF" stroke-width="22" stroke-linejoin="round"/>
+</svg>
