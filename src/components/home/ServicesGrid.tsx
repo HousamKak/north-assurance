@@ -5,6 +5,7 @@ import { FaHeartbeat, FaShieldAlt, FaCar, FaPlane, FaHome, FaBriefcase } from 'r
 import { Card } from '@/components/common/Card';
 import { AnimatedSection } from '@/components/common/AnimatedSection';
 import { services } from '@/data/services';
+import { publicAsset } from '@/utils/helpers';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   FaHeartbeat,
@@ -32,7 +33,7 @@ export const ServicesGrid: React.FC = () => {
                 {service.image && (
                   <div className="relative h-44 overflow-hidden">
                     <img
-                      src={service.image}
+                      src={publicAsset(service.image)}
                       alt=""
                       aria-hidden="true"
                       loading="lazy"

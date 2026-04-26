@@ -5,6 +5,7 @@ import { HiMenu, HiX, HiChevronDown } from 'react-icons/hi';
 import { ThemeToggle } from '@/components/common/ThemeToggle';
 import { Button } from '@/components/common/Button';
 import { ROUTES, COMPANY_INFO } from '@/utils/constants';
+import { publicAsset } from '@/utils/helpers';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +54,7 @@ export const Navbar: React.FC = () => {
           <Link to={ROUTES.HOME} className="flex items-center space-x-3 group">
             <div className="w-12 h-12 rounded-xl shadow-lg group-hover:shadow-primary/25 transition-shadow overflow-hidden">
               <img
-                src="/images/logos/logo-mark.svg"
+                src={publicAsset('/images/logos/logo-mark.svg')}
                 alt=""
                 aria-hidden="true"
                 className="w-full h-full"

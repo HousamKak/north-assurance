@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
 import { COMPANY_INFO, SOCIAL_LINKS, ROUTES } from '@/utils/constants';
+import { publicAsset } from '@/utils/helpers';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -26,7 +27,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center space-x-3 mb-5">
               <div className="w-10 h-10 rounded-lg overflow-hidden">
                 <img
-                  src="/images/logos/logo-mark.svg"
+                  src={publicAsset('/images/logos/logo-mark.svg')}
                   alt=""
                   aria-hidden="true"
                   className="w-full h-full"

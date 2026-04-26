@@ -5,6 +5,7 @@ import { FaShieldAlt, FaHandshake, FaAward, FaClock } from 'react-icons/fa';
 import { Button } from '@/components/common/Button';
 import { AnimatedSection } from '@/components/common/AnimatedSection';
 import { COMPANY_INFO, ROUTES } from '@/utils/constants';
+import { publicAsset } from '@/utils/helpers';
 
 const features = [
   {
@@ -37,7 +38,7 @@ export const AboutPreview: React.FC = () => {
         <div className="relative">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src="/images/hero/about-preview.jpg"
+              src={publicAsset('/images/hero/about-preview.jpg')}
               alt="North Assurance Office"
               className="w-full h-[500px] object-cover"
             />

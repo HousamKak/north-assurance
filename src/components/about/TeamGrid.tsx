@@ -4,6 +4,7 @@ import { FaLinkedinIn, FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { Card } from '@/components/common/Card';
 import { AnimatedSection } from '@/components/common/AnimatedSection';
 import { teamMembers } from '@/data/team';
+import { publicAsset } from '@/utils/helpers';
 
 export const TeamGrid: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ export const TeamGrid: React.FC = () => {
               <motion.img
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
-                src={member.image}
+                src={publicAsset(member.image)}
                 alt={member.name}
                 className="w-full h-full object-cover"
                 onError={(e) => {

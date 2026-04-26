@@ -7,6 +7,7 @@ import { Timeline } from '@/components/about/Timeline';
 import { TeamGrid } from '@/components/about/TeamGrid';
 import { CompanyStats } from '@/components/about/CompanyStats';
 import { COMPANY_INFO } from '@/utils/constants';
+import { publicAsset } from '@/utils/helpers';
 
 export const About: React.FC = () => {
   return (
@@ -29,7 +30,7 @@ export const About: React.FC = () => {
             <div className="relative">
               <div className="rounded-2xl shadow-2xl w-full h-[500px] overflow-hidden">
                 <img
-                  src="/images/hero/company-overview.jpg"
+                  src={publicAsset('/images/hero/company-overview.jpg')}
                   alt="North Assurance office and client service"
                   className="w-full h-full object-cover"
                 />

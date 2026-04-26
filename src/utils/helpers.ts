@@ -19,3 +19,22 @@ export const truncateText = (text: string, maxLength: number): string => {
 export const formatNumber = (num: number): string => {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };
+
+/**
+ * Resolve files from Vite's public directory against the configured app base.
+ * This keeps GitHub Pages deployments under /north-assurance/ from requesting
+ * assets from the domain root.
+ */
+export const publicAsset = (path: string): string => {
+  if (!path) return path;
+
+  if (/^(?:[a-z][a-z\d+\-.]*:)?\/\//i.test(path) || path.startsWith('data:') || path.startsWith('blob:')) {
+    return path;
+  }
+
+  const base = import.meta.env.BASE_URL || '/';
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  const normalizedPath = path.replace(/^\/+/, '');
+
+  return `${normalizedBase}${normalizedPath}`;
+};

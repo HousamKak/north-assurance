@@ -5,6 +5,7 @@ import { FaStar } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Card } from '@/components/common/Card';
 import { testimonials } from '@/data/testimonials';
+import { publicAsset } from '@/utils/helpers';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -41,7 +42,7 @@ export const TestimonialCarousel: React.FC = () => {
                 className="mb-6"
               >
                 <img
-                  src={testimonial.image}
+                  src={publicAsset(testimonial.image)}
                   alt={testimonial.name}
                   className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-primary/20"
                   onError={(e) => {

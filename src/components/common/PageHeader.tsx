@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaChevronRight } from 'react-icons/fa';
 import { ROUTES } from '@/utils/constants';
+import { publicAsset } from '@/utils/helpers';
 
 interface Breadcrumb {
   label: string;
@@ -29,7 +30,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
       {backgroundImage && (
         <>
           <img
-            src={backgroundImage}
+            src={publicAsset(backgroundImage)}
             alt=""
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover"

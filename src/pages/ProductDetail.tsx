@@ -7,6 +7,7 @@ import { Button } from '@/components/common/Button';
 import { QuoteForm } from '@/components/products/QuoteForm';
 import { ProductCard } from '@/components/products/ProductCard';
 import { allProducts } from '@/data/products';
+import { publicAsset } from '@/utils/helpers';
 import { FaHeartbeat, FaCar, FaShieldAlt, FaPlane, FaHome, FaAmbulance, FaHospital, FaUsers, FaBriefcase, FaBuilding, FaUserTie, FaChevronRight } from 'react-icons/fa';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -60,7 +61,7 @@ export const ProductDetail: React.FC = () => {
         {product.image && (
           <>
             <img
-              src={product.image}
+              src={publicAsset(product.image)}
               alt=""
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover"

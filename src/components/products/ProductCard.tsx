@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { FaHeartbeat, FaCar, FaShieldAlt, FaPlane, FaHome, FaAmbulance, FaHospital, FaUsers, FaBriefcase, FaBuilding, FaUserTie } from 'react-icons/fa';
 import { Card } from '@/components/common/Card';
 import { Button } from '@/components/common/Button';
+import { publicAsset } from '@/utils/helpers';
 import type { Product } from '@/types';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -32,7 +33,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       {product.image && (
         <div className="relative h-44 overflow-hidden">
           <img
-            src={product.image}
+            src={publicAsset(product.image)}
             alt=""
             aria-hidden="true"
             loading="lazy"

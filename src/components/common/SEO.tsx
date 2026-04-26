@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
+import { publicAsset } from '@/utils/helpers';
 
 interface SEOProps {
   title?: string;
@@ -43,7 +44,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={publicAsset(image)} />
       <meta property="og:site_name" content={defaultMeta.siteName} />
 
       {/* Twitter */}
@@ -51,7 +52,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={publicAsset(image)} />
 
       <meta name="robots" content="index, follow" />
       <meta name="author" content="North Assurance" />

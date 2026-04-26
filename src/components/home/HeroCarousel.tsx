@@ -4,6 +4,7 @@ import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO, ROUTES } from '@/utils/constants';
+import { publicAsset } from '@/utils/helpers';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -55,7 +56,7 @@ export const HeroCarousel: React.FC = () => {
           <SwiperSlide key={slide.id}>
             <div className={`relative h-[85vh] min-h-[500px] max-h-[800px] w-full overflow-hidden bg-gradient-to-br ${slide.gradient}`}>
               <img
-                src={slide.image}
+                src={publicAsset(slide.image)}
                 alt=""
                 aria-hidden="true"
                 className="absolute inset-0 w-full h-full object-cover"
