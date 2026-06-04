@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiMenu, HiX, HiChevronDown } from 'react-icons/hi';
+import { HiMenu, HiX, HiChevronDown, HiMoon, HiSun } from 'react-icons/hi';
 import { ThemeToggle } from '@/components/common/ThemeToggle';
 import { Button } from '@/components/common/Button';
+import { useTheme } from '@/hooks/useTheme';
 import { ROUTES } from '@/utils/constants';
 import { publicAsset } from '@/utils/helpers';
 
@@ -13,6 +14,7 @@ export const Navbar: React.FC = () => {
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -249,6 +251,22 @@ export const Navbar: React.FC = () => {
                     {link.label}
                   </NavLink>
                 ))}
+
+                {/* Theme toggle — labeled for discoverability on mobile */}
+                <div className="px-4 pt-2">
+                  <button
+                    onClick={toggleTheme}
+                    className="flex items-center justify-between w-full px-4 py-3 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-dark-light transition-colors"
+                    aria-label="Toggle dark mode"
+                  >
+                    <span>{theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}</span>
+                    {theme === 'dark' ? (
+                      <HiSun className="w-5 h-5 text-yellow-500" />
+                    ) : (
+                      <HiMoon className="w-5 h-5 text-primary" />
+                    )}
+                  </button>
+                </div>
 
                 <div className="px-4 pt-4 space-y-3">
                   <a
