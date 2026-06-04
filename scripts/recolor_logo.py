@@ -6,8 +6,8 @@ im = Image.open(src).convert("RGBA")
 # White version (as downloaded) — for dark backgrounds
 im.save("public/images/logos/northassurance-logo-white.png")
 
-# Navy version — recolor opaque pixels to brand navy (#013A7D), preserve alpha
-navy = (1, 58, 125)
+# Navy version — recolor opaque pixels to brand navy (#15233c), preserve alpha
+navy = (21, 35, 60)
 px = im.load()
 out = Image.new("RGBA", im.size)
 po = out.load()

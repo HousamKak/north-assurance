@@ -11,7 +11,9 @@ export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
+  const [repairDropdownOpen, setRepairDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const repairDropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,6 +29,9 @@ export const Navbar: React.FC = () => {
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setProductsDropdownOpen(false);
+      }
+      if (repairDropdownRef.current && !repairDropdownRef.current.contains(e.target as Node)) {
+        setRepairDropdownOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -131,9 +136,64 @@ export const Navbar: React.FC = () => {
               </AnimatePresence>
             </div>
 
-            <NavLink to={ROUTES.MOTOR_REPAIR} className={navLinkClass}>
-              APR Car Repair
-            </NavLink>
+            {/* Car Repair Services Dropdown — hover AND click/keyboard */}
+            <div
+              ref={repairDropdownRef}
+              className="relative"
+              onMouseEnter={() => setRepairDropdownOpen(true)}
+              onMouseLeave={() => setRepairDropdownOpen(false)}
+            >
+              <button
+                onClick={() => setRepairDropdownOpen(!repairDropdownOpen)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setRepairDropdownOpen(!repairDropdownOpen);
+                  }
+                }}
+                className="px-4 py-2 rounded-lg transition-colors text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light flex items-center space-x-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                aria-expanded={repairDropdownOpen}
+                aria-haspopup="true"
+              >
+                <span>Car Repair Services</span>
+                <HiChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    repairDropdownOpen ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+
+              <AnimatePresence>
+                {repairDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute top-full left-0 mt-1 w-56 bg-white dark:bg-dark-light rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden"
+                    role="menu"
+                  >
+                    <Link
+                      to={ROUTES.MOTOR_REPAIR}
+                      className="block px-4 py-3 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors text-gray-700 dark:text-gray-300 text-sm focus-visible:outline-none focus-visible:bg-primary/5"
+                      role="menuitem"
+                      onClick={() => setRepairDropdownOpen(false)}
+                    >
+                      APR
+                    </Link>
+                    <Link
+                      to={ROUTES.MOTOR_REPAIR}
+                      className="block px-4 py-3 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors text-gray-700 dark:text-gray-300 text-sm focus-visible:outline-none focus-visible:bg-primary/5"
+                      role="menuitem"
+                      onClick={() => setRepairDropdownOpen(false)}
+                    >
+                      Other
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             <NavLink to={ROUTES.CAREERS} className={navLinkClass}>
               Careers
             </NavLink>
@@ -230,25 +290,41 @@ export const Navbar: React.FC = () => {
                   </div>
                 </div>
 
-                {[
-                  { to: ROUTES.MOTOR_REPAIR, label: 'APR Car Repair' },
-                  { to: ROUTES.CAREERS, label: 'Careers' },
-                ].map((link) => (
-                  <NavLink
-                    key={link.to}
-                    to={link.to}
-                    className={({ isActive }) =>
-                      `block px-4 py-3 rounded-lg text-sm font-medium ${
-                        isActive
-                          ? 'bg-primary/10 text-primary dark:text-primary-light'
-                          : 'text-gray-700 dark:text-gray-300'
-                      }`
-                    }
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.label}
-                  </NavLink>
-                ))}
+                <div className="px-4 py-2">
+                  <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">
+                    Car Repair Services
+                  </p>
+                  <div className="pl-3 space-y-1 border-l-2 border-primary/20">
+                    <NavLink
+                      to={ROUTES.MOTOR_REPAIR}
+                      className="block py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      APR
+                    </NavLink>
+                    <NavLink
+                      to={ROUTES.MOTOR_REPAIR}
+                      className="block py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Other
+                    </NavLink>
+                  </div>
+                </div>
+
+                <NavLink
+                  to={ROUTES.CAREERS}
+                  className={({ isActive }) =>
+                    `block px-4 py-3 rounded-lg text-sm font-medium ${
+                      isActive
+                        ? 'bg-primary/10 text-primary dark:text-primary-light'
+                        : 'text-gray-700 dark:text-gray-300'
+                    }`
+                  }
+                  onClick={() => setIsOpen(false)}
+                >
+                  Careers
+                </NavLink>
 
                 <div className="px-4 pt-4 space-y-3">
                   <a
