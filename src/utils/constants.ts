@@ -1,4 +1,4 @@
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 export const COMPANY_INFO = {
   name: 'North Assurance s.a.l.',
@@ -20,9 +20,8 @@ export const COMPANY_INFO = {
 
 export const SOCIAL_LINKS = [
   { name: 'Facebook', url: 'https://facebook.com/northassurance', icon: FaFacebook },
-  { name: 'Twitter', url: 'https://twitter.com/northassurance', icon: FaTwitter },
-  { name: 'LinkedIn', url: 'https://linkedin.com/company/northassurance', icon: FaLinkedin },
   { name: 'Instagram', url: 'https://instagram.com/northassurance', icon: FaInstagram },
+  { name: 'LinkedIn', url: 'https://linkedin.com/company/northassurance', icon: FaLinkedin },
 ];
 
 export const ROUTES = {

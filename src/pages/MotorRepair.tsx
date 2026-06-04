@@ -28,13 +28,13 @@ export const MotorRepair: React.FC = () => {
   return (
     <div>
       <SEO
-        title="Motor Repair Services"
-        description="Professional auto repair and maintenance at our Zouk Mosbeh facility. Expert body repair, mechanical services, and insurance claims processing."
+        title="APR Car Repair Facility"
+        description="Car repair specialists at APR Zouk Mosbeh facility. Expert body repair, mechanical services, and insurance claims processing."
       />
 
       <PageHeader
-        title="Motor Repair Services"
-        subtitle="Professional auto repair and maintenance at our Zouk Mosbeh facility"
+        title="APR Car Repair Facility"
+        subtitle="Car repair specialists at APR Zouk Mosbeh facility"
         backgroundImage="/images/headers/motor-repair.jpg"
       />
 

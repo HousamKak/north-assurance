@@ -17,7 +17,7 @@ export const Contact: React.FC = () => {
 
       <PageHeader
         title="Contact Us"
-        subtitle="Get in touch with our team - we're here to help"
+        subtitle="Get in touch with our team - we're ready to help"
         backgroundImage="/images/headers/contact.jpg"
       />
 

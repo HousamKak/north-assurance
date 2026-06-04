@@ -4,7 +4,7 @@ import { COMPANY_INFO, SOCIAL_LINKS } from '@/utils/constants';
 
 export const Topbar: React.FC = () => {
   return (
-    <div className="hidden lg:block bg-dark text-white/70 py-2 transition-theme">
+    <div className="hidden lg:block bg-dark text-white py-2 transition-theme">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center text-sm">
           {/* Contact Info */}

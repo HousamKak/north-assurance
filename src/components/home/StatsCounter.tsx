@@ -18,7 +18,7 @@ const stats: Stat[] = [
     suffix: '+',
   },
   {
-    label: 'Years of Experience',
+    label: 'Years of Service & Excellence',
     value: COMPANY_INFO.yearsOfExperience,
     suffix: '+',
   },

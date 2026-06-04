@@ -24,18 +24,12 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-3 mb-5">
-              <div className="w-10 h-10 rounded-lg overflow-hidden">
-                <img
-                  src={publicAsset('/images/logos/logo-mark.svg')}
-                  alt=""
-                  aria-hidden="true"
-                  className="w-full h-full"
-                />
-              </div>
-              <h3 className="text-xl font-heading font-bold text-white">
-                North Assurance
-              </h3>
+            <div className="mb-5">
+              <img
+                src={publicAsset('/images/logos/northassurance-logo-white.png')}
+                alt="North Assurance"
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-sm leading-relaxed mb-6 text-gray-400">
               Protecting Lebanon's future with trusted insurance services since {COMPANY_INFO.established}.
@@ -84,7 +78,7 @@ export const Footer: React.FC = () => {
                 { to: ROUTES.ABOUT, label: 'About Us' },
                 { to: ROUTES.INDIVIDUAL_PRODUCTS, label: 'Individual Products' },
                 { to: ROUTES.CORPORATE_PRODUCTS, label: 'Corporate Products' },
-                { to: ROUTES.MOTOR_REPAIR, label: 'Motor Repair' },
+                { to: ROUTES.MOTOR_REPAIR, label: 'APR Car Repair Facility' },
                 { to: ROUTES.CONTACT, label: 'Contact Us' },
                 { to: ROUTES.CAREERS, label: 'Careers' },
               ].map((link) => (

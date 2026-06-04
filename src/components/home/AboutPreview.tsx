@@ -55,8 +55,7 @@ export const AboutPreview: React.FC = () => {
               <div className="text-5xl font-heading font-bold">
                 {COMPANY_INFO.yearsOfExperience}+
               </div>
-              <div className="text-sm font-semibold mt-1">Years</div>
-              <div className="text-xs opacity-90">Experience</div>
+              <div className="text-sm font-semibold mt-1 leading-tight max-w-[7rem]">Years of Service &amp; Excellence</div>
             </div>
           </motion.div>
         </div>

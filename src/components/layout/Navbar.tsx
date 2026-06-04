@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX, HiChevronDown } from 'react-icons/hi';
 import { ThemeToggle } from '@/components/common/ThemeToggle';
 import { Button } from '@/components/common/Button';
-import { ROUTES, COMPANY_INFO } from '@/utils/constants';
+import { ROUTES } from '@/utils/constants';
 import { publicAsset } from '@/utils/helpers';
 
 export const Navbar: React.FC = () => {
@@ -51,23 +51,17 @@ export const Navbar: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to={ROUTES.HOME} className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 rounded-xl shadow-lg group-hover:shadow-primary/25 transition-shadow overflow-hidden">
-              <img
-                src={publicAsset('/images/logos/logo-mark.svg')}
-                alt=""
-                aria-hidden="true"
-                className="w-full h-full"
-              />
-            </div>
-            <div>
-              <span className="text-xl font-heading font-bold text-gray-900 dark:text-white block leading-tight">
-                North Assurance
-              </span>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                Since {COMPANY_INFO.established}
-              </p>
-            </div>
+          <Link to={ROUTES.HOME} className="flex items-center group" aria-label="North Assurance — Home">
+            <img
+              src={publicAsset('/images/logos/northassurance-logo-navy.png')}
+              alt="North Assurance"
+              className="h-12 w-auto dark:hidden"
+            />
+            <img
+              src={publicAsset('/images/logos/northassurance-logo-white.png')}
+              alt="North Assurance"
+              className="h-12 w-auto hidden dark:block"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -138,10 +132,7 @@ export const Navbar: React.FC = () => {
             </div>
 
             <NavLink to={ROUTES.MOTOR_REPAIR} className={navLinkClass}>
-              Motor Repair
-            </NavLink>
-            <NavLink to={ROUTES.CONTACT} className={navLinkClass}>
-              Contact
+              APR Car Repair
             </NavLink>
             <NavLink to={ROUTES.CAREERS} className={navLinkClass}>
               Careers
@@ -151,6 +142,14 @@ export const Navbar: React.FC = () => {
           {/* Right Side Actions */}
           <div className="flex items-center space-x-3">
             <ThemeToggle />
+
+            <a
+              href="tel:+9614747274"
+              className="hidden lg:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-red-600 hover:bg-red-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+              aria-label="Call 24/7 road assistance"
+            >
+              Road Assistance
+            </a>
 
             <div className="hidden lg:block">
               <Button
@@ -232,8 +231,7 @@ export const Navbar: React.FC = () => {
                 </div>
 
                 {[
-                  { to: ROUTES.MOTOR_REPAIR, label: 'Motor Repair' },
-                  { to: ROUTES.CONTACT, label: 'Contact' },
+                  { to: ROUTES.MOTOR_REPAIR, label: 'APR Car Repair' },
                   { to: ROUTES.CAREERS, label: 'Careers' },
                 ].map((link) => (
                   <NavLink
@@ -252,7 +250,14 @@ export const Navbar: React.FC = () => {
                   </NavLink>
                 ))}
 
-                <div className="px-4 pt-4">
+                <div className="px-4 pt-4 space-y-3">
+                  <a
+                    href="tel:+9614747274"
+                    className="flex items-center justify-center w-full px-6 py-3 text-base font-medium rounded-lg bg-red-600 hover:bg-red-700 text-white shadow-lg transition-all duration-300"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Road Assistance
+                  </a>
                   <Button
                     className="w-full"
                     size="md"
