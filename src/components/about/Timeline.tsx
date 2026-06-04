@@ -23,7 +23,7 @@ export const Timeline: React.FC = () => {
               } flex-col`}
             >
               {/* Content */}
-              <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
+              <div className={`w-full pl-20 md:w-5/12 ${index % 2 === 0 ? 'md:pl-0 md:pr-12' : 'md:pl-12'}`}>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   className="bg-white dark:bg-dark p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow"
@@ -41,14 +41,14 @@ export const Timeline: React.FC = () => {
               </div>
 
               {/* Center Dot */}
-              <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 flex items-center justify-center">
+              <div className="absolute left-8 md:left-1/2 top-6 md:top-auto transform -translate-x-1/2 flex items-center justify-center">
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ type: 'spring', stiffness: 200 }}
-                  className="w-16 h-16 bg-primary rounded-full border-4 border-white dark:border-dark-lighter shadow-lg flex items-center justify-center z-10"
+                  className="w-12 h-12 md:w-16 md:h-16 bg-primary rounded-full border-4 border-white dark:border-dark-lighter shadow-lg flex items-center justify-center z-10"
                 >
-                  <span className="text-white font-bold text-sm">
+                  <span className="text-white font-bold text-xs md:text-sm">
                     {event.year.split('-')[0]}
                   </span>
                 </motion.div>
