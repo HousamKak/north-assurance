@@ -13,7 +13,7 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    label: 'Happy Clients',
+    label: 'Serviced Clients',
     value: 10000,
     suffix: '+',
   },

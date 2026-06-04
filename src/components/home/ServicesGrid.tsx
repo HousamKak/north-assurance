@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaHeartbeat, FaShieldAlt, FaCar, FaPlane, FaHome, FaBriefcase } from 'react-icons/fa';
+import { FaHeartbeat, FaShieldAlt, FaCar, FaPlane, FaHome, FaBriefcase, FaPlus } from 'react-icons/fa';
 import { Card } from '@/components/common/Card';
 import { AnimatedSection } from '@/components/common/AnimatedSection';
 import { services } from '@/data/services';
@@ -14,6 +14,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   FaPlane,
   FaHome,
   FaBriefcase,
+  FaPlus,
 };
 
 export const ServicesGrid: React.FC = () => {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiMenu, HiX, HiChevronDown, HiMoon, HiSun } from 'react-icons/hi';
+import { HiMenu, HiX, HiChevronDown, HiMoon, HiSun, HiPhone } from 'react-icons/hi';
 import { ThemeToggle } from '@/components/common/ThemeToggle';
 import { Button } from '@/components/common/Button';
 import { useTheme } from '@/hooks/useTheme';
@@ -43,6 +43,17 @@ export const Navbar: React.FC = () => {
     }`;
 
   return (
+    <>
+    {/* Floating emergency Road Assistance button — always visible on mobile */}
+    <a
+      href="tel:+9614747274"
+      aria-label="Call 24/7 emergency road assistance"
+      className="lg:hidden fixed bottom-5 right-4 z-[60] flex items-center gap-2 px-5 py-3 rounded-full bg-red-600 text-white font-semibold shadow-2xl shadow-red-600/40 ring-4 ring-red-600/25 active:scale-95 transition-transform"
+    >
+      <HiPhone className="w-5 h-5 animate-pulse" />
+      Road Assistance
+    </a>
+
     <nav
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
@@ -268,14 +279,7 @@ export const Navbar: React.FC = () => {
                   </button>
                 </div>
 
-                <div className="px-4 pt-4 space-y-3">
-                  <a
-                    href="tel:+9614747274"
-                    className="flex items-center justify-center w-full px-6 py-3 text-base font-medium rounded-lg bg-red-600 hover:bg-red-700 text-white shadow-lg transition-all duration-300"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Road Assistance
-                  </a>
+                <div className="px-4 pt-4">
                   <Button
                     className="w-full"
                     size="md"
@@ -293,5 +297,6 @@ export const Navbar: React.FC = () => {
         </AnimatePresence>
       </div>
     </nav>
+    </>
   );
 };

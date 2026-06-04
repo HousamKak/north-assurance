@@ -7,7 +7,7 @@ export const individualProducts: Product[] = [
     category: 'individual',
     description: 'Comprehensive health coverage for you and your family',
     shortDescription: 'In-hospital, ambulatory benefits, doctor visits, and medicines coverage',
-    icon: 'FaHeartbeat',
+    icon: 'FaPlus',
     image: '/images/products/medical.jpg',
     features: [
       'In-hospital medical care',
@@ -59,7 +59,7 @@ export const individualProducts: Product[] = [
     category: 'individual',
     description: 'Protect your loved ones financial future',
     shortDescription: 'Life protection and financial security for your family',
-    icon: 'FaShieldAlt',
+    icon: 'FaHeartbeat',
     image: '/images/products/life.jpg',
     features: [
       'Death benefit',
