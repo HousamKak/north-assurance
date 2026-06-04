@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
+import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO, ROUTES } from '@/utils/constants';
@@ -8,7 +8,6 @@ import { publicAsset } from '@/utils/helpers';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
 const slides = [
@@ -36,7 +35,7 @@ export const HeroCarousel: React.FC = () => {
   return (
     <div className="relative w-full">
       <Swiper
-        modules={[Autoplay, Pagination, Navigation, EffectFade]}
+        modules={[Autoplay, Pagination, EffectFade]}
         spaceBetween={0}
         slidesPerView={1}
         effect="fade"
@@ -48,7 +47,6 @@ export const HeroCarousel: React.FC = () => {
           bulletClass: 'swiper-pagination-bullet hero-bullet',
           bulletActiveClass: 'hero-bullet-active',
         }}
-        navigation
         loop
         className="hero-swiper"
       >
@@ -140,25 +138,6 @@ export const HeroCarousel: React.FC = () => {
       </Swiper>
 
       <style>{`
-        .hero-swiper .swiper-button-next,
-        .hero-swiper .swiper-button-prev {
-          color: white;
-          background: rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(8px);
-          width: 50px;
-          height: 50px;
-          border-radius: 12px;
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          transition: all 0.3s;
-        }
-        .hero-swiper .swiper-button-next:hover,
-        .hero-swiper .swiper-button-prev:hover {
-          background: rgba(255, 255, 255, 0.2);
-        }
-        .hero-swiper .swiper-button-next:after,
-        .hero-swiper .swiper-button-prev:after {
-          font-size: 18px;
-        }
         .hero-swiper .swiper-pagination {
           bottom: 30px;
         }
