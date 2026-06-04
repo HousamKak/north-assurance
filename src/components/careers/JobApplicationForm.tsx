@@ -63,7 +63,7 @@ export const JobApplicationForm: React.FC = () => {
     // mailto cannot carry the CV file, so we ask the applicant to attach it manually.
     const mailto = buildMailto(
       COMPANY_INFO.email,
-      `Job Application: ${data.position} - ${data.firstName} ${data.lastName}`,
+      `Job Application: ${data.position}, ${data.firstName} ${data.lastName}`,
       [
         ['First Name', data.firstName],
         ['Last Name', data.lastName],
@@ -297,7 +297,7 @@ export const JobApplicationForm: React.FC = () => {
         </Button>
 
         <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-          Submitting opens your email app with the details filled in — please attach your CV before sending.
+          Submitting opens your email app with the details filled in. Please attach your CV before sending.
         </p>
       </form>
     </Card>

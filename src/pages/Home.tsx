@@ -53,7 +53,7 @@ export const Home: React.FC = () => {
               What Our Clients Say
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Don't just take our word for it - hear from our satisfied customers
+              Don't just take our word for it, hear from our satisfied customers
             </p>
           </div>
         </AnimatedSection>

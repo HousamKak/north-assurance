@@ -104,7 +104,7 @@ export const ProductDetail: React.FC = () => {
       {/* Product Details & Quote Form */}
       <Section background="light">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Main Content - 2 columns */}
+          {/* Main Content (2 columns) */}
           <div className="lg:col-span-2 space-y-8">
             {/* Features */}
             <AnimatedSection animation="slide-up">
@@ -183,7 +183,7 @@ export const ProductDetail: React.FC = () => {
             </AnimatedSection>
           </div>
 
-          {/* Quote Form Sidebar - 1 column */}
+          {/* Quote Form Sidebar (1 column) */}
           <div id="quote" className="scroll-mt-24">
             <AnimatedSection animation="slide-up" delay={0.3}>
               <QuoteForm productName={product.name} productCategory={product.category} />

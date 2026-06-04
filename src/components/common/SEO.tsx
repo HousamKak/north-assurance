@@ -13,7 +13,7 @@ interface SEOProps {
 
 const defaultMeta = {
   siteName: 'North Assurance',
-  title: 'North Assurance - Insurance Solutions in Lebanon',
+  title: 'North Assurance | Insurance Solutions in Lebanon',
   description: 'Leading insurance provider in Lebanon since 1973. Offering comprehensive individual and corporate insurance solutions including medical, motor, life, and property insurance.',
   keywords: 'insurance lebanon, north assurance, medical insurance, motor insurance, life insurance, corporate insurance, property insurance, travel insurance',
   image: '/images/logos/logo.png',

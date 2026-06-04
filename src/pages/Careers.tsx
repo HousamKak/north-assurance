@@ -26,12 +26,12 @@ export const Careers: React.FC = () => {
     <div>
       <SEO
         title="Careers & Partnerships"
-        description="Join North Assurance - Lebanon's trusted insurance leader. Explore career opportunities or partner with us as a garage, healthcare provider, or broker."
+        description="Join North Assurance, Lebanon's trusted insurance leader. Explore career opportunities or partner with us as a garage, healthcare provider, or broker."
       />
 
       <PageHeader
         title="Careers & Partnerships"
-        subtitle="Build your career — or partner with Lebanon's trusted insurance leader"
+        subtitle="Build your career, or partner with Lebanon's trusted insurance leader"
         backgroundImage="/images/headers/careers.jpg"
       />
 
@@ -115,15 +115,17 @@ export const Careers: React.FC = () => {
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">Partnerships</span>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-4">Partner With North Assurance</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              We collaborate with garages, healthcare providers, brokers, and businesses across Lebanon. Let's grow together.
+              We work with partners across Lebanon to deliver better service to our clients. The areas
+              below are common examples, and we welcome inquiries about other forms of collaboration.
             </p>
           </div>
         </AnimatedSection>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {[
             { icon: FaCarSide, title: 'Repair & Garage Partners', description: 'Join our nationwide network of trusted motor repair and towing partners.' },
             { icon: FaHospitalUser, title: 'Healthcare Providers', description: 'Hospitals, clinics, and pharmacies partnering on our medical coverage network.' },
             { icon: FaBuilding, title: 'Brokers & Corporates', description: 'Brokers and companies looking for reliable insurance solutions for their clients and teams.' },
+            { icon: FaHandshake, title: 'Other Collaborations', description: 'Have a different partnership in mind? We are glad to discuss opportunities of any kind.' },
           ].map((partner, index) => (
             <AnimatedSection key={partner.title} animation="slide-up" delay={index * 0.1}>
               <Card hover className="p-6 text-center h-full">

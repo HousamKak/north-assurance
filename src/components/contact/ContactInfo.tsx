@@ -86,10 +86,10 @@ export const ContactInfo: React.FC = () => {
               Office Hours
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Monday - Friday: 9:00 AM - 5:00 PM
+              Monday to Friday: 9:00 AM to 5:00 PM
             </p>
             <p className="text-gray-600 dark:text-gray-400">
-              Saturday: 9:00 AM - 1:00 PM
+              Saturday: 9:00 AM to 1:00 PM
             </p>
             <p className="text-gray-600 dark:text-gray-400">
               Sunday: Closed

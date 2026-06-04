@@ -70,7 +70,7 @@ export const FeaturesSection: React.FC = () => {
           <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
             We understand that choosing the right insurance provider is crucial. That's why
             we've built our reputation on trust, reliability, and exceptional service. Our
-            commitment to our clients goes beyond just selling policies – we're here to
+            commitment to our clients goes beyond just selling policies. We're here to
             protect what matters most to you.
           </p>
 

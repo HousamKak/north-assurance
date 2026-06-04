@@ -44,7 +44,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-    {/* Floating emergency Road Assistance button — always visible on mobile */}
+    {/* Floating emergency Road Assistance button, always visible on mobile */}
     <a
       href="tel:+9614747274"
       aria-label="Call 24/7 emergency road assistance"
@@ -64,7 +64,7 @@ export const Navbar: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to={ROUTES.HOME} className="flex items-center group" aria-label="North Assurance — Home">
+          <Link to={ROUTES.HOME} className="flex items-center group" aria-label="North Assurance Home">
             <img
               src={publicAsset('/images/logos/northassurance-logo-navy.png')}
               alt="North Assurance"
@@ -86,7 +86,7 @@ export const Navbar: React.FC = () => {
               About Us
             </NavLink>
 
-            {/* Products Dropdown — supports hover AND click/keyboard */}
+            {/* Products Dropdown: supports hover AND click/keyboard */}
             <div
               ref={dropdownRef}
               className="relative"
@@ -263,7 +263,7 @@ export const Navbar: React.FC = () => {
                   </NavLink>
                 ))}
 
-                {/* Theme toggle — labeled for discoverability on mobile */}
+                {/* Theme toggle, labeled for discoverability on mobile */}
                 <div className="px-4 pt-2">
                   <button
                     onClick={toggleTheme}
