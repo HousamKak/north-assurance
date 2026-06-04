@@ -31,3 +31,6 @@ dist-ssr
 # Temp/debug files
 output.txt
 file_selector.log
+
+# Playwright MCP test artifacts
+.playwright-mcp/

@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import { FaPaperPlane } from 'react-icons/fa';
 import { Card } from '@/components/common/Card';
 import { Button } from '@/components/common/Button';
+import { COMPANY_INFO } from '@/utils/constants';
+import { buildMailto } from '@/utils/helpers';
 import type { QuoteFormData } from '@/types';
 
 const quoteSchema = z.object({
@@ -23,7 +25,6 @@ interface QuoteFormProps {
 }
 
 export const QuoteForm: React.FC<QuoteFormProps> = ({ productName, productCategory: _ }) => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const {
@@ -38,20 +39,21 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ productName, productCatego
     },
   });
 
-  const onSubmit = async (data: QuoteFormData) => {
-    setIsSubmitting(true);
+  const onSubmit = (data: QuoteFormData) => {
+    // Static site: open the visitor's email client pre-filled, addressed to info@
+    const mailto = buildMailto(COMPANY_INFO.email, `Quote Request: ${data.productType}`, [
+      ['Name', data.name],
+      ['Email', data.email],
+      ['Phone', data.phone],
+      ['Product', data.productType],
+      ['Coverage Preference', data.coverage],
+      ['Details', data.message],
+    ]);
+    window.location.href = mailto;
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    // TODO: integrate with backend API or email service
-    void data;
-    setIsSubmitting(false);
     setSubmitSuccess(true);
     reset({ productType: productName });
-
-    // Reset success message after 5 seconds
-    setTimeout(() => setSubmitSuccess(false), 5000);
+    setTimeout(() => setSubmitSuccess(false), 8000);
   };
 
   return (
@@ -67,7 +69,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ productName, productCatego
           className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-500 rounded-lg"
         >
           <p className="text-green-700 dark:text-green-300">
-            Thank you! We'll send you a personalized quote soon.
+            Your email app should open with your request ready to send to {COMPANY_INFO.email}. Press send and we'll get back to you with a quote.
           </p>
         </motion.div>
       )}
@@ -197,7 +199,6 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ productName, productCatego
           variant="primary"
           size="lg"
           className="w-full"
-          isLoading={isSubmitting}
         >
           <FaPaperPlane className="mr-2" />
           Get Quote

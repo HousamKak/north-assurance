@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import { FaPaperPlane, FaUpload } from 'react-icons/fa';
 import { Card } from '@/components/common/Card';
 import { Button } from '@/components/common/Button';
+import { COMPANY_INFO } from '@/utils/constants';
+import { buildMailto } from '@/utils/helpers';
 import type { JobApplicationFormData } from '@/types';
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
@@ -44,7 +46,6 @@ const experienceLevels = [
 ];
 
 export const JobApplicationForm: React.FC = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [selectedFileName, setSelectedFileName] = useState<string>('');
 
@@ -57,21 +58,29 @@ export const JobApplicationForm: React.FC = () => {
     resolver: zodResolver(jobApplicationSchema),
   });
 
-  const onSubmit = async (data: JobApplicationFormData) => {
-    setIsSubmitting(true);
+  const onSubmit = (data: JobApplicationFormData) => {
+    // Static site: open the visitor's email client pre-filled, addressed to info@.
+    // mailto cannot carry the CV file, so we ask the applicant to attach it manually.
+    const mailto = buildMailto(
+      COMPANY_INFO.email,
+      `Job Application: ${data.position} - ${data.firstName} ${data.lastName}`,
+      [
+        ['First Name', data.firstName],
+        ['Last Name', data.lastName],
+        ['Email', data.email],
+        ['Phone', data.phone],
+        ['Position', data.position],
+        ['Experience', data.experience],
+        ['Cover Letter', data.coverLetter],
+        ['CV / Resume', `${selectedFileName || 'see attachment'} (please attach your CV to this email before sending)`],
+      ],
+    );
+    window.location.href = mailto;
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    // TODO: integrate with backend API or email service
-    void data;
-    setIsSubmitting(false);
     setSubmitSuccess(true);
     setSelectedFileName('');
     reset();
-
-    // Reset success message after 5 seconds
-    setTimeout(() => setSubmitSuccess(false), 5000);
+    setTimeout(() => setSubmitSuccess(false), 10000);
   };
 
   return (
@@ -87,7 +96,7 @@ export const JobApplicationForm: React.FC = () => {
           className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-500 rounded-lg"
         >
           <p className="text-green-700 dark:text-green-300">
-            Thank you for your application! We'll review it and get back to you soon.
+            Your email app should open with your application ready to send to {COMPANY_INFO.email}. Please attach your CV before pressing send.
           </p>
         </motion.div>
       )}
@@ -282,11 +291,14 @@ export const JobApplicationForm: React.FC = () => {
           variant="primary"
           size="lg"
           className="w-full"
-          isLoading={isSubmitting}
         >
           <FaPaperPlane className="mr-2" />
           Submit Application
         </Button>
+
+        <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+          Submitting opens your email app with the details filled in — please attach your CV before sending.
+        </p>
       </form>
     </Card>
   );

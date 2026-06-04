@@ -17,7 +17,6 @@ export const ContactInfo: React.FC = () => {
               Phone
             </h3>
             <p className="text-gray-600 dark:text-gray-400">{COMPANY_INFO.phone}</p>
-            <p className="text-gray-600 dark:text-gray-400">{COMPANY_INFO.phoneAlt}</p>
           </div>
         </div>
       </Card>

@@ -4,7 +4,6 @@ import { AnimatedSection } from '@/components/common/AnimatedSection';
 import { PageHeader } from '@/components/common/PageHeader';
 import { SEO } from '@/components/common/SEO';
 import { Timeline } from '@/components/about/Timeline';
-import { TeamGrid } from '@/components/about/TeamGrid';
 import { CompanyStats } from '@/components/about/CompanyStats';
 import { COMPANY_INFO } from '@/utils/constants';
 import { publicAsset } from '@/utils/helpers';
@@ -110,22 +109,6 @@ export const About: React.FC = () => {
           </div>
         </AnimatedSection>
         <Timeline />
-      </Section>
-
-      {/* Team */}
-      <Section className="bg-white dark:bg-dark-darkest">
-        <AnimatedSection animation="fade">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">Our Team</span>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-4">
-              Meet Our Professional Team
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Experienced professionals dedicated to providing the best insurance solutions
-            </p>
-          </div>
-        </AnimatedSection>
-        <TeamGrid />
       </Section>
     </div>
   );

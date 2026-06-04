@@ -90,9 +90,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               Learn More
             </Button>
           </Link>
-          <Button variant="outline" size="sm">
-            Get Quote
-          </Button>
+          <Link to={`/products/${product.id}#quote`}>
+            <Button variant="outline" size="sm">
+              Get Quote
+            </Button>
+          </Link>
         </div>
       </div>
     </Card>

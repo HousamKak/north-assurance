@@ -27,4 +27,21 @@ export const testimonials: Testimonial[] = [
     content: 'After my car accident, North Assurance handled everything professionally. Their motor repair center is top-notch, and the claim was settled quickly.',
     rating: 5,
   },
+  {
+    id: '4',
+    name: 'Ali Hamdan',
+    position: 'Business Owner',
+    company: 'Hamdan Trading Co.',
+    image: '/images/testimonials/ali-hamdan.jpg',
+    content: 'North Assurance insured both my company and my family. The team is responsive, transparent, and always goes the extra mile. A partner I fully trust.',
+    rating: 5,
+  },
+  {
+    id: '5',
+    name: 'Zainab Fakih',
+    position: 'Individual Client',
+    image: '/images/testimonials/zainab-fakih.jpg',
+    content: 'From medical to motor insurance, everything was simple and clearly explained. I always get a quick reply and genuine care. Highly recommended.',
+    rating: 5,
+  },
 ];

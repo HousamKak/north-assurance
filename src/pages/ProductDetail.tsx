@@ -184,7 +184,7 @@ export const ProductDetail: React.FC = () => {
           </div>
 
           {/* Quote Form Sidebar - 1 column */}
-          <div>
+          <div id="quote" className="scroll-mt-24">
             <AnimatedSection animation="slide-up" delay={0.3}>
               <QuoteForm productName={product.name} productCategory={product.category} />
             </AnimatedSection>

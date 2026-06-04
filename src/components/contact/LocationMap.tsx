@@ -79,14 +79,6 @@ export const LocationMap: React.FC = () => {
               Multiple bus routes stop near Freeway Tower. The nearest service taxi station is 200m away.
             </p>
           </div>
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-              For Garage Visits
-            </h4>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Our motor repair facility is located in Zouk Mosbeh Industrial Zone. Please call ahead to schedule your visit.
-            </p>
-          </div>
         </div>
       </Card>
     </div>

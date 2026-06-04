@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/common/PageHeader';
 import { SEO } from '@/components/common/SEO';
 import { Card } from '@/components/common/Card';
 import { JobApplicationForm } from '@/components/careers/JobApplicationForm';
-import { FaUsers, FaHandshake, FaGraduationCap, FaHeart } from 'react-icons/fa';
+import { FaUsers, FaHandshake, FaGraduationCap, FaHeart, FaBuilding, FaCarSide, FaHospitalUser } from 'react-icons/fa';
 
 const benefits = [
   { icon: FaUsers, title: 'Team Environment', description: 'Work with passionate professionals in a collaborative atmosphere' },
@@ -25,13 +25,13 @@ export const Careers: React.FC = () => {
   return (
     <div>
       <SEO
-        title="Careers"
-        description="Join North Assurance - Lebanon's trusted insurance leader. Explore career opportunities and apply today."
+        title="Careers & Partnerships"
+        description="Join North Assurance - Lebanon's trusted insurance leader. Explore career opportunities or partner with us as a garage, healthcare provider, or broker."
       />
 
       <PageHeader
-        title="Join Our Team"
-        subtitle="Build your career with Lebanon's trusted insurance leader"
+        title="Careers & Partnerships"
+        subtitle="Build your career — or partner with Lebanon's trusted insurance leader"
         backgroundImage="/images/headers/careers.jpg"
       />
 
@@ -108,8 +108,49 @@ export const Careers: React.FC = () => {
         </AnimatedSection>
       </Section>
 
-      {/* Application */}
+      {/* Partnerships */}
       <Section className="bg-white dark:bg-dark-darkest">
+        <AnimatedSection animation="fade">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">Partnerships</span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-4">Partner With North Assurance</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              We collaborate with garages, healthcare providers, brokers, and businesses across Lebanon. Let's grow together.
+            </p>
+          </div>
+        </AnimatedSection>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          {[
+            { icon: FaCarSide, title: 'Repair & Garage Partners', description: 'Join our nationwide network of trusted motor repair and towing partners.' },
+            { icon: FaHospitalUser, title: 'Healthcare Providers', description: 'Hospitals, clinics, and pharmacies partnering on our medical coverage network.' },
+            { icon: FaBuilding, title: 'Brokers & Corporates', description: 'Brokers and companies looking for reliable insurance solutions for their clients and teams.' },
+          ].map((partner, index) => (
+            <AnimatedSection key={partner.title} animation="slide-up" delay={index * 0.1}>
+              <Card hover className="p-6 text-center h-full">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <partner.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-heading font-bold text-gray-900 dark:text-white mb-2">{partner.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">{partner.description}</p>
+              </Card>
+            </AnimatedSection>
+          ))}
+        </div>
+        <AnimatedSection animation="scale">
+          <div className="text-center">
+            <a
+              href="mailto:info@northassurance.com?subject=Partnership%20Inquiry"
+              className="inline-flex items-center px-8 py-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-xl shadow-lg transition-all duration-300"
+            >
+              <FaHandshake className="mr-2" />
+              Become a Partner
+            </a>
+          </div>
+        </AnimatedSection>
+      </Section>
+
+      {/* Application */}
+      <Section background="light">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <AnimatedSection animation="slide-up">
@@ -149,8 +190,8 @@ export const Careers: React.FC = () => {
               <Card className="p-6">
                 <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white mb-4">Questions?</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">Have questions about career opportunities?</p>
-                <a href="mailto:hr@northassurance.com" className="text-primary dark:text-primary-light hover:underline font-medium text-sm">
-                  hr@northassurance.com
+                <a href="mailto:info@northassurance.com" className="text-primary dark:text-primary-light hover:underline font-medium text-sm">
+                  info@northassurance.com
                 </a>
               </Card>
             </AnimatedSection>

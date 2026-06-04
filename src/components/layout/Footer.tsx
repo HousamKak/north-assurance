@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
 import { COMPANY_INFO, SOCIAL_LINKS, ROUTES } from '@/utils/constants';
@@ -6,22 +6,11 @@ import { publicAsset } from '@/utils/helpers';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleNewsletter = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail('');
-      setTimeout(() => setSubscribed(false), 4000);
-    }
-  };
 
   return (
     <footer className="bg-dark text-gray-300 transition-theme">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Company Info */}
           <div>
             <div className="mb-5">
@@ -93,36 +82,6 @@ export const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h4 className="text-lg font-heading font-semibold text-white mb-5">Newsletter</h4>
-            <p className="text-sm text-gray-400 mb-4">
-              Subscribe to our newsletter for the latest insurance news and updates.
-            </p>
-            {subscribed ? (
-              <div className="p-3 bg-green-500/10 border border-green-500/30 rounded-lg">
-                <p className="text-sm text-green-400">Thank you for subscribing!</p>
-              </div>
-            ) : (
-              <form onSubmit={handleNewsletter} className="space-y-3">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email"
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary text-white text-sm transition-colors"
-                />
-                <button
-                  type="submit"
-                  className="w-full px-4 py-3 bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary rounded-lg text-white font-medium text-sm transition-all duration-300"
-                >
-                  Subscribe
-                </button>
-              </form>
-            )}
           </div>
         </div>
       </div>

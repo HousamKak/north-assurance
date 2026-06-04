@@ -6,8 +6,6 @@ export const COMPANY_INFO = {
   yearsOfExperience: new Date().getFullYear() - 1973,
   email: 'info@northassurance.com',
   phone: '+961 1 511 995',
-  phoneAlt: '+961 1 511 996',
-  fax: '+961 1 511 996',
   address: 'Sin el-Fil Blvd, Freeway Tower, Beirut, Lebanon',
   garageAddress: 'Zouk Mosbeh, Industrial Zone, Lebanon',
   garage: {

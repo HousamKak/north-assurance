@@ -38,6 +38,42 @@ export const MotorRepair: React.FC = () => {
         backgroundImage="/images/headers/motor-repair.jpg"
       />
 
+      {/* Nationwide Coverage */}
+      <Section className="bg-white dark:bg-dark-darkest">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <AnimatedSection animation="slide-up">
+            <div>
+              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">Nationwide Coverage</span>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                We Cover You All Over Lebanon
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                Wherever you are in Lebanon, North Assurance has you covered. Our motor claims,
+                towing, and repair services reach across the entire country — no matter where your
+                accident or breakdown happens.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400">
+                Our flagship repair facility is <strong className="text-gray-900 dark:text-white">APR, in Zouk Mosbeh</strong>,
+                where certified technicians handle everything from collision and bodywork to full
+                mechanical repairs.
+              </p>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection animation="slide-up" delay={0.2}>
+            <Card className="p-8 bg-gradient-to-br from-primary to-primary-dark text-white border-0 text-center">
+              <div className="text-5xl font-heading font-bold mb-2">APR</div>
+              <p className="text-xl font-semibold mb-4">Zouk Mosbeh Facility</p>
+              <p className="text-white/80 mb-6">
+                Our dedicated car repair center — certified technicians, original parts, and quality-assured workmanship.
+              </p>
+              <div className="inline-flex items-center px-4 py-2 bg-white/10 rounded-full border border-white/15 text-sm font-medium">
+                <FaMapMarkerAlt className="mr-2" /> Coverage across all Lebanon
+              </div>
+            </Card>
+          </AnimatedSection>
+        </div>
+      </Section>
+
       {/* Services */}
       <Section background="light">
         <AnimatedSection animation="fade">
@@ -73,10 +109,10 @@ export const MotorRepair: React.FC = () => {
             <div>
               <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">Our Facility</span>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-6">
-                Modern Facilities & Equipment
+                APR — Modern Facilities & Equipment
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-                Our Zouk Mosbeh garage is equipped with the latest technology and staffed by certified professionals.
+                Our APR facility in Zouk Mosbeh is equipped with the latest technology and staffed by certified professionals.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {facilities.map((facility, index) => (

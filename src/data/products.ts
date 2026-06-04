@@ -51,7 +51,7 @@ export const individualProducts: Product[] = [
       'Legal expenses',
       'Windscreen replacement',
     ],
-    price: 'From $200/year',
+    price: 'From $100/year',
   },
   {
     id: 'life',
@@ -128,7 +128,7 @@ export const individualProducts: Product[] = [
       'Storm and flood damage',
       'Third party liability',
     ],
-    price: 'From $300/year',
+    price: 'From $100/year',
   },
   {
     id: 'personal-accident',

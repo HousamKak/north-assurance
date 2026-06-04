@@ -21,6 +21,23 @@ export const formatNumber = (num: number): string => {
 };
 
 /**
+ * Build a `mailto:` URL with subject and a body assembled from field label/value pairs.
+ * Used by the site's forms to open the visitor's local email client pre-filled,
+ * addressed to the company inbox (static site, no backend).
+ */
+export const buildMailto = (
+  to: string,
+  subject: string,
+  fields: Array<[string, string | undefined]>,
+): string => {
+  const body = fields
+    .filter(([, value]) => value && value.trim() !== '')
+    .map(([label, value]) => `${label}: ${value}`)
+    .join('\r\n');
+  return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};
+
+/**
  * Resolve files from Vite's public directory against the configured app base.
  * This keeps GitHub Pages deployments under /north-assurance/ from requesting
  * assets from the domain root.
