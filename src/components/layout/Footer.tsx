@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
+import { HiMail, HiPhone, HiLocationMarker, HiClock } from 'react-icons/hi';
 import { FaAward } from 'react-icons/fa';
 import { COMPANY_INFO, SOCIAL_LINKS, ROUTES } from '@/utils/constants';
 import { publicAsset } from '@/utils/helpers';
@@ -73,6 +73,15 @@ export const Footer: React.FC = () => {
                 <HiMail className="w-5 h-5 text-primary flex-shrink-0" />
                 <span className="text-sm">{COMPANY_INFO.email}</span>
               </a>
+              <div className="flex items-start space-x-3">
+                <HiClock className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                <div className="text-sm text-gray-400">
+                  <p>Mon to Fri: 8:00 AM to 5:00 PM</p>
+                  <p className="text-xs italic text-gray-500 dark:text-gray-500 mt-0.5">
+                    Schedule changes during July and August
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
