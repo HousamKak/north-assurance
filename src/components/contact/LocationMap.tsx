@@ -1,86 +1,63 @@
 import React from 'react';
+import { FaMapMarkerAlt, FaPhoneAlt, FaDirections } from 'react-icons/fa';
 import { Card } from '@/components/common/Card';
+import { BRANCHES } from '@/utils/constants';
+
+const telHref = (phone: string) =>
+  `tel:+961${phone.replace(/\D/g, '').replace(/^0/, '')}`;
+
+const mapsHref = (query: string) =>
+  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${query}, Lebanon`)}`;
 
 export const LocationMap: React.FC = () => {
-  // Google Maps embed URL for Sin el-Fil, Beirut
-  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.0815!2d35.5538!3d33.8886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDUzJzE5LjAiTiAzNcKwMzMnMTMuNyJF!5e0!3m2!1sen!2slb!4v1234567890";
-
   return (
-    <div className="space-y-6">
-      {/* Office Location */}
-      <Card className="p-0 overflow-hidden">
-        <div className="p-4 bg-gradient-to-r from-primary to-primary-dark">
-          <h3 className="text-xl font-heading font-bold text-white">
-            Office Location
-          </h3>
-          <p className="text-white/90 text-sm mt-1">
-            Sin el-Fil Blvd, Freeway Tower, Beirut, Lebanon
-          </p>
-        </div>
-        <div className="relative h-96">
-          <iframe
-            src={mapEmbedUrl}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="North Assurance Office Location"
-            className="absolute inset-0"
-          />
-        </div>
-      </Card>
-
-      {/* Garage Location */}
-      <Card className="p-0 overflow-hidden">
-        <div className="p-4 bg-gradient-to-r from-secondary to-secondary-dark">
-          <h3 className="text-xl font-heading font-bold text-white">
-            Garage Location
-          </h3>
-          <p className="text-white/90 text-sm mt-1">
-            Zouk Mosbeh, Industrial Zone, Lebanon
-          </p>
-        </div>
-        <div className="relative h-96">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.5!2d35.6089!3d33.9569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU3JzI0LjgiTiAzNcKwMzYnMzIuMCJF!5e0!3m2!1sen!2slb!4v1234567890"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="North Assurance Garage Location"
-            className="absolute inset-0"
-          />
-        </div>
-      </Card>
-
-      {/* Directions Card */}
-      <Card className="p-6">
-        <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white mb-4">
-          Getting Here
-        </h3>
-        <div className="space-y-4">
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-              By Car
-            </h4>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Free parking available at Freeway Tower. Use the main entrance on Sin el-Fil Boulevard.
-            </p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {BRANCHES.map((branch) => (
+        <Card key={branch.name} hover className="p-6 h-full flex flex-col">
+          <div className="flex items-start justify-between gap-3 mb-4">
+            <div>
+              <h3 className="text-lg font-heading font-bold text-gray-900 dark:text-white leading-tight">
+                {branch.name}
+              </h3>
+              {branch.note && (
+                <span className="inline-block mt-2 px-2.5 py-0.5 text-[11px] font-medium rounded-full bg-secondary/10 text-secondary-dark dark:text-secondary">
+                  {branch.note}
+                </span>
+              )}
+            </div>
+            <div className="w-10 h-10 rounded-lg bg-primary/10 dark:bg-primary/20 flex items-center justify-center flex-shrink-0">
+              <FaMapMarkerAlt className="w-5 h-5 text-primary" />
+            </div>
           </div>
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-              Public Transportation
-            </h4>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Multiple bus routes stop near Freeway Tower. The nearest service taxi station is 200m away.
-            </p>
+
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 flex-grow">
+            {branch.address}
+          </p>
+
+          <div className="space-y-2 mb-5">
+            {branch.phones.map((phone) => (
+              <a
+                key={phone}
+                href={telHref(phone)}
+                className="flex items-center gap-2.5 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light transition-colors"
+              >
+                <FaPhoneAlt className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+                {phone}
+              </a>
+            ))}
           </div>
-        </div>
-      </Card>
+
+          <a
+            href={mapsHref(`North Assurance ${branch.name} ${branch.address}`)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary dark:text-primary-light hover:underline mt-auto"
+          >
+            <FaDirections className="w-4 h-4" />
+            Get Directions
+          </a>
+        </Card>
+      ))}
     </div>
   );
 };

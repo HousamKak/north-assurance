@@ -150,6 +150,9 @@ export const Navbar: React.FC = () => {
             <NavLink to={ROUTES.CAREERS} className={navLinkClass}>
               Careers
             </NavLink>
+            <NavLink to={ROUTES.CONTACT} className={navLinkClass}>
+              Contact Us
+            </NavLink>
           </div>
 
           {/* Right Side Actions */}
@@ -246,6 +249,7 @@ export const Navbar: React.FC = () => {
                 {[
                   { to: ROUTES.MOTOR_REPAIR, label: 'Car Repair Services' },
                   { to: ROUTES.CAREERS, label: 'Careers' },
+                  { to: ROUTES.CONTACT, label: 'Contact Us' },
                 ].map((link) => (
                   <NavLink
                     key={link.to}

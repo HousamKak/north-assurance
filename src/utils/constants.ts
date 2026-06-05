@@ -45,3 +45,39 @@ export const CONTACT_SUBJECTS = [
   'Claims Support',
   'New Quote Request',
 ];
+
+export interface Branch {
+  name: string;
+  note?: string;
+  address: string;
+  phones: string[];
+}
+
+export const BRANCHES: Branch[] = [
+  {
+    name: 'Beirut Branch',
+    address: 'Charles Helou Avenue, Sehnaoui Bldg',
+    phones: ['01 442 773', '01 449 889'],
+  },
+  {
+    name: 'Zalka Branch',
+    address: 'Hotel Promenade, Zalka',
+    phones: ['01 872 874'],
+  },
+  {
+    name: 'Zouk Mosbeh Branch',
+    note: 'Motor Claims Center',
+    address: 'Industrial Zone, Zouk Mosbeh',
+    phones: ['09 218 759', '09 219 759'],
+  },
+  {
+    name: 'Jounieh Branch',
+    address: 'Jounieh Square, St. Jean Center',
+    phones: ['09 933 961'],
+  },
+  {
+    name: 'Tripoli Head Office',
+    address: 'Gemmayzate Street, Karam Bldg',
+    phones: ['06 430 901'],
+  },
+];
