@@ -17,9 +17,9 @@ export const COMPANY_INFO = {
 };
 
 export const SOCIAL_LINKS = [
-  { name: 'Facebook', url: 'https://facebook.com/northassurance', icon: FaFacebook },
-  { name: 'Instagram', url: 'https://instagram.com/northassurance', icon: FaInstagram },
-  { name: 'LinkedIn', url: 'https://linkedin.com/company/northassurance', icon: FaLinkedin },
+  { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61559416181360', icon: FaFacebook },
+  { name: 'Instagram', url: 'https://www.instagram.com/northassurance.lb', icon: FaInstagram },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/company/north-assurance-s-a-l/', icon: FaLinkedin },
 ];
 
 export const ROUTES = {
