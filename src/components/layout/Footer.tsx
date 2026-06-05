@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HiMail, HiPhone, HiLocationMarker, HiClock } from 'react-icons/hi';
-import { FaAward } from 'react-icons/fa';
+import { FaAward, FaCalendarAlt, FaMapMarkerAlt, FaArrowRight } from 'react-icons/fa';
 import { COMPANY_INFO, SOCIAL_LINKS, ROUTES } from '@/utils/constants';
 import { publicAsset } from '@/utils/helpers';
 
@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-dark text-gray-300 transition-theme">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div>
             <div className="mb-5">
@@ -41,20 +41,6 @@ export const Footer: React.FC = () => {
                 </a>
               ))}
             </div>
-
-            {/* Official Insurer badge */}
-            <a
-              href="https://projectlebanon.com/insurance"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-3 rounded-xl border border-secondary/30 bg-gradient-to-br from-secondary/10 to-primary/10 hover:from-secondary/20 hover:to-primary/20 px-4 py-3 transition-colors"
-            >
-              <FaAward className="w-9 h-9 text-secondary flex-shrink-0" />
-              <span className="leading-tight">
-                <span className="block text-[11px] uppercase tracking-wider text-gray-400">Official Insurer</span>
-                <span className="block text-sm font-semibold text-white">Project Lebanon 2026</span>
-              </span>
-            </a>
           </div>
 
           {/* Contact Info */}
@@ -108,6 +94,44 @@ export const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Official Insurer — Project Lebanon */}
+          <div>
+            <h4 className="text-lg font-heading font-semibold text-white mb-5">Official Insurer</h4>
+            <a
+              href="https://projectlebanon.com/insurance"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block rounded-2xl border border-red-500/30 bg-gradient-to-br from-red-600/15 to-red-900/10 hover:from-red-600/25 hover:to-red-900/20 p-5 transition-colors"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-red-600 flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <FaAward className="w-6 h-6 text-white" />
+                </div>
+                <div className="leading-tight">
+                  <span className="block text-lg font-heading font-extrabold text-white tracking-tight">Project Lebanon</span>
+                  <span className="block text-[11px] uppercase tracking-[0.18em] text-red-400 font-semibold">2026 Edition</span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-400 mb-4">
+                North Assurance is the official insurer of Project Lebanon, the country's leading construction and industry trade fair.
+              </p>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-center gap-2 text-xs text-gray-400">
+                  <FaCalendarAlt className="w-3.5 h-3.5 text-red-400 flex-shrink-0" />
+                  Sept 29 to Oct 2, 2026
+                </li>
+                <li className="flex items-center gap-2 text-xs text-gray-400">
+                  <FaMapMarkerAlt className="w-3.5 h-3.5 text-red-400 flex-shrink-0" />
+                  Seaside Arena, Beirut New Waterfront
+                </li>
+              </ul>
+              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-red-400 group-hover:text-red-300 transition-colors">
+                Learn more
+                <FaArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+              </span>
+            </a>
           </div>
         </div>
       </div>
