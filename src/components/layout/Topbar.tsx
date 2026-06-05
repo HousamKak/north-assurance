@@ -1,5 +1,5 @@
 import React from 'react';
-import { HiPhone, HiMail, HiClock } from 'react-icons/hi';
+import { HiPhone, HiMail, HiClock, HiQuestionMarkCircle } from 'react-icons/hi';
 import { COMPANY_INFO, SOCIAL_LINKS } from '@/utils/constants';
 
 export const Topbar: React.FC = () => {
@@ -20,6 +20,16 @@ export const Topbar: React.FC = () => {
             <div className="flex items-center space-x-2">
               <HiClock className="w-4 h-4" />
               <span>Mon to Fri: 08 AM to 05 PM</span>
+              <span
+                className="relative group inline-flex items-center"
+                tabIndex={0}
+                aria-label="Summer schedule note"
+              >
+                <HiQuestionMarkCircle className="w-4 h-4 text-white/80 hover:text-white cursor-help" />
+                <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-full mt-2 w-56 rounded-lg bg-white text-dark text-xs px-3 py-2 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-200 z-[100] shadow-xl ring-1 ring-black/5 text-center font-normal">
+                  Hours change during the summer (July and August).
+                </span>
+              </span>
             </div>
           </div>
 

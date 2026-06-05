@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaQuestionCircle } from 'react-icons/fa';
 import { Card } from '@/components/common/Card';
 import { COMPANY_INFO, SOCIAL_LINKS } from '@/utils/constants';
 
@@ -85,10 +85,22 @@ export const ContactInfo: React.FC = () => {
             <h3 className="text-lg font-heading font-bold text-gray-900 dark:text-white mb-2">
               Office Hours
             </h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Monday to Friday: 8:00 AM to 5:00 PM
-            </p>
-            <p className="text-gray-600 dark:text-gray-400">
+            <div className="flex items-center gap-1.5">
+              <p className="text-gray-600 dark:text-gray-400">
+                Monday to Friday: 8:00 AM to 5:00 PM
+              </p>
+              <span
+                className="relative group inline-flex items-center"
+                tabIndex={0}
+                aria-label="Summer schedule note"
+              >
+                <FaQuestionCircle className="w-4 h-4 text-primary cursor-help" />
+                <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-56 rounded-lg bg-dark text-white text-xs px-3 py-2 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-200 z-20 shadow-lg text-center">
+                  Hours change during the summer (July and August).
+                </span>
+              </span>
+            </div>
+            <p className="text-xs italic text-gray-500 dark:text-gray-400 mt-1">
               Schedule changes during July and August
             </p>
           </div>

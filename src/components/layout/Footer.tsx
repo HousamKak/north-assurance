@@ -20,8 +20,10 @@ export const Footer: React.FC = () => {
                 className="h-12 w-auto"
               />
             </div>
-            <p className="text-sm leading-relaxed mb-6 text-gray-400">
+            <p className="text-sm leading-relaxed mb-2 text-gray-400">
               Be better prepared for the future with trusted insurance services since {COMPANY_INFO.established}.
+            </p>
+            <p className="text-sm leading-relaxed mb-6 text-gray-400">
               {COMPANY_INFO.yearsOfExperience}+ years of excellence and reliability.
             </p>
             <div className="flex space-x-3">
