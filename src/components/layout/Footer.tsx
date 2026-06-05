@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
+import { FaAward } from 'react-icons/fa';
 import { COMPANY_INFO, SOCIAL_LINKS, ROUTES } from '@/utils/constants';
 import { publicAsset } from '@/utils/helpers';
 
@@ -40,6 +41,20 @@ export const Footer: React.FC = () => {
                 </a>
               ))}
             </div>
+
+            {/* Official Insurer badge */}
+            <a
+              href="https://projectlebanon.com/insurance"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-3 rounded-xl border border-secondary/30 bg-gradient-to-br from-secondary/10 to-primary/10 hover:from-secondary/20 hover:to-primary/20 px-4 py-3 transition-colors"
+            >
+              <FaAward className="w-9 h-9 text-secondary flex-shrink-0" />
+              <span className="leading-tight">
+                <span className="block text-[11px] uppercase tracking-wider text-gray-400">Official Insurer</span>
+                <span className="block text-sm font-semibold text-white">Project Lebanon 2026</span>
+              </span>
+            </a>
           </div>
 
           {/* Contact Info */}
