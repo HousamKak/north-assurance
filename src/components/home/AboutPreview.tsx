@@ -73,7 +73,7 @@ export const AboutPreview: React.FC = () => {
           </p>
 
           <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-            North Assurance has been Lebanon's trusted insurance partner since 1973.
+            North Assurance has been Lebanon's prime insurer since 1973.
             Our commitment to excellence, professional service, and innovative solutions
             has made us a leader in the insurance industry. We combine traditional values
             with modern technology to provide comprehensive protection for individuals and businesses.

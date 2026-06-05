@@ -26,12 +26,12 @@ export const Careers: React.FC = () => {
     <div>
       <SEO
         title="Careers & Partnerships"
-        description="Join North Assurance, Lebanon's trusted insurance leader. Explore career opportunities or partner with us as a garage, healthcare provider, or broker."
+        description="Join North Assurance, Lebanon's prime insurer. Explore career opportunities or partner with us as a garage, healthcare provider, or broker."
       />
 
       <PageHeader
         title="Careers & Partnerships"
-        subtitle="Build your career, or partner with Lebanon's trusted insurance leader"
+        subtitle="Build your career, or partner with Lebanon's prime insurer"
         backgroundImage="/images/headers/careers.jpg"
       />
 

@@ -13,7 +13,7 @@ import 'swiper/css/effect-fade';
 const slides = [
   {
     id: 1,
-    title: "Protecting Lebanon's Future",
+    title: 'Be Better Prepared for the Future',
     subtitle: `${COMPANY_INFO.yearsOfExperience}+ Years of Trust & Excellence`,
     description: 'Comprehensive insurance solutions for individuals and businesses since 1973',
     gradient: 'from-primary via-primary-dark to-dark',

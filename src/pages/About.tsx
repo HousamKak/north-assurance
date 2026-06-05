@@ -13,7 +13,7 @@ export const About: React.FC = () => {
     <div>
       <SEO
         title="About Us"
-        description={`North Assurance s.a.l. Lebanon's trusted insurance provider since 1973. ${COMPANY_INFO.yearsOfExperience}+ years of professional insurance services.`}
+        description={`North Assurance s.a.l. Lebanon's prime insurer since 1973. ${COMPANY_INFO.yearsOfExperience}+ years of professional insurance services.`}
       />
 
       <PageHeader

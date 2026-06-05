@@ -19,7 +19,7 @@ export const Topbar: React.FC = () => {
             </a>
             <div className="flex items-center space-x-2">
               <HiClock className="w-4 h-4" />
-              <span>Mon to Fri: 09 AM to 05 PM</span>
+              <span>Mon to Fri: 08 AM to 05 PM</span>
             </div>
           </div>
 

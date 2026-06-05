@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
               />
             </div>
             <p className="text-sm leading-relaxed mb-6 text-gray-400">
-              Protecting Lebanon's future with trusted insurance services since {COMPANY_INFO.established}.
+              Be better prepared for the future with trusted insurance services since {COMPANY_INFO.established}.
               {COMPANY_INFO.yearsOfExperience}+ years of excellence and reliability.
             </p>
             <div className="flex space-x-3">
