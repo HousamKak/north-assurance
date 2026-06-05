@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { publicAsset } from '@/utils/helpers';
+import { SOCIAL_LINKS } from '@/utils/constants';
 
 interface SEOProps {
   title?: string;
@@ -33,6 +34,17 @@ export const SEO: React.FC<SEOProps> = ({
     : defaultMeta.title;
   const canonicalUrl = `${defaultMeta.baseUrl}${location.pathname}`;
 
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'InsuranceAgency',
+    name: 'North Assurance s.a.l.',
+    url: defaultMeta.baseUrl,
+    logo: `${defaultMeta.baseUrl}/images/logos/logo.png`,
+    description: defaultMeta.description,
+    areaServed: 'LB',
+    sameAs: SOCIAL_LINKS.map((social) => social.url),
+  };
+
   return (
     <Helmet>
       <title>{fullTitle}</title>
@@ -57,6 +69,9 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="robots" content="index, follow" />
       <meta name="author" content="North Assurance" />
       <link rel="canonical" href={canonicalUrl} />
+
+      {/* Structured data: links the site to the official social profiles (sameAs) */}
+      <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
     </Helmet>
   );
 };
